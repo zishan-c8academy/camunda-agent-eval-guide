@@ -4,7 +4,9 @@ A Claude Code plugin for Camunda Solutions Engineers that adds a defensible, fou
 eval (with a live dashboard) to **any Camunda project using AI Agent Tasks or AI Agent ad-hoc
 sub-processes**, whatever LLM provider the project runs on.
 
-This is the public guide. The plugin code lives in a private repo; request access below.
+This is the public guide. The plugin code lives in Camunda's consulting GitHub org at
+[camunda-consulting/camunda-agent-eval](https://github.com/camunda-consulting/camunda-agent-eval)
+(not public): anyone with a Camunda GitHub account can use it directly, no access request needed.
 
 ![Example dashboard](dashboard-example.png)
 
@@ -41,10 +43,10 @@ You do not hand-configure the eval. The plugin's skill:
 OpenAI-compatible endpoints (OpenAI, Cohere, Groq, Ollama, OpenRouter, vLLM), Anthropic,
 Azure OpenAI, Google Gemini, and AWS Bedrock. Models with missing keys are skipped gracefully.
 
-## Install (requires access to the private repo)
+## Install (Camunda GitHub account required)
 
 ```
-/plugin marketplace add zishan-c8academy/camunda-agent-eval
+/plugin marketplace add camunda-consulting/camunda-agent-eval
 /plugin install camunda-agent-eval@camunda-agent-eval
 ```
 
@@ -52,12 +54,17 @@ Then open Claude Code in your Camunda project and say:
 
 > add a model eval to this project
 
-## Request access / contribute
+If the marketplace add fails with a 404, your git credentials are not authorized for the
+camunda-consulting org yet: run `gh auth login` (or `gh auth refresh`) and approve the
+SSO prompt for camunda-consulting in the browser.
 
-- **Access to install**: open an issue on THIS repo with your GitHub username, or ping Zishan
-  directly. You will be added as a collaborator on the private repo.
-- **Improvements**: collaborators push a branch and open a pull request on the private repo
-  (please do not push to master directly). Ideas without code are welcome as issues here.
+## Contribute
+
+- **Improvements**: push a branch and open a pull request on
+  [camunda-consulting/camunda-agent-eval](https://github.com/camunda-consulting/camunda-agent-eval)
+  (please do not push to master directly).
+- **Ideas and bug reports**: open an issue on that repo; if you are outside the Camunda org,
+  open it here instead.
 
 ## Good to know
 
